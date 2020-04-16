@@ -1,0 +1,121 @@
+################################################################################
+
+################################################################################
+
+setenv bootargs 'earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 rw panic=10 init=/sbin/init cohereent_pool=1M ethaddr=32:30:91:0f:ef:3b eth1addr=serial=d372be676639601 cgroup_enaable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 root=/dev/mmcblk0p7 rootwait rootfstype=ext4 log_level=7'
+
+ext4load mmc 1:7 ${kernel_addr_r} boot/Image;ext4load mmc 1:7 ${fdt_addr_r} boot/rk3399-rockpro64.dtb;booti ${kernel_addr_r} - ${fdt_addr_r}
+
+################################################################################
+				ayufan cmds
+################################################################################
+
+ext4load mmc 1:7 ${kernel_addr_r} boot/vmlinuz-4.4.132-1075-rockchip-ayufan-ga83beded8524;ext4load mmc 1:7 ${fdt_addr_r} boot/dtbs/4.4.132-1075-rockchip-ayufan-ga83beded8524/rockchip/rk3399-rockpro64.dtb;booti ${kernel_addr_r} - ${fdt_addr_r}
+
+################################################################################
+			odd combination
+################################################################################
+
+ext4load mmc 1:7 ${kernel_addr_r} boot/vmlinuz-4.4.132-1075-rockchip-ayufan-ga83beded8524;ext4load mmc 1:7 ${fdt_addr_r} boot/rk3399-rockpro64.dtb;booti ${kernel_addr_r} - ${fdt_addr_r}
+
+ext4load mmc 1:7 ${kernel_addr_r} boot/Image;ext4load mmc 1:7 ${fdt_addr_r} boot/dtbs/4.4.132-1075-rockchip-ayufan-ga83beded8524/rockchip/rk3399-rockpro64.dtb;booti ${kernel_addr_r} - ${fdt_addr_r}
+
+################################################################################
+				u-boot command line
+################################################################################
+
+make distclean
+make rockpro64-rk3399_defconfig
+make -j 16
+tools/mkimage -n rk3399 -T rksd  -d spl/u-boot-spl.bin spl_sd.img
+make u-boot.itb
+
+sudo dd if=/dev/zero of=/dev/sdb bs=1M count=1
+sudo dd if=spl_sd.img of=/dev/sdb bs=1k seek=32  conv=nocreat
+sudo dd if=u-boot.itb of=/dev/sdb bs=1k seek=256 conv=nocreat
+
+################################################################################
+				U-boot Bring UP
+################################################################################
+
+curl --fail -L https://github.com/ayufan-rock64/rkbin/raw/master/rk33/rk3399_ddr_933MHz_v1.13.bin > rk3399_ddr_933MHz_v1.13.bin
+
+curl --fail -L https://github.com/ayufan-rock64/rkbin/raw/master/rk33/rk3399_bl31_v1.17.elf > rk3399_bl31_v1.17.elf
+
+make distclean
+make clean
+make rockpro64-rk3399_defconfig tools
+make -j 16
+make u-boot.itb -j 16
+
+make rockpro64-rk3399_defconfig tools
+tools/mkimage -n rk3399 -T rksd -d tmp/rkbin/rk33/rk3399_ddr_933MHz_v1.13.bin rksd_loader.img
+cat tmp/u-boot-rockpro64/spl/u-boot-spl.bin >> rksd_loader.img
+
+# dd if=u-boot.itb of=rksd_loader.img seek=$((0x200-64)) conv=notrunc
+
+sudo dd if=/dev/zero of=/dev/sdb bs=1M count=1
+sudo dd if=rksd_loader.img of=/dev/sdb bs=1k seek=32 conv=nocreat
+sudo dd if=tmp/u-boot-rockpro64/u-boot.itb of=/dev/sdb bs=1k seek=256 conv=nocreat
+sync
+
+################################################################################
+
+tools/mkimage -n rk3399 -T rksd -d spl/u-boot-spl.bin rksd_loader.img
+
+sudo dd if=/dev/zero of=/dev/sdb bs=1M count=1
+
+sudo dd if=rksd_loader.img of=/dev/sdb bs=1k seek=32 conv=nocreat
+sudo dd if=u-boot.itb of=/dev/sdb bs=1k seek=256 conv=nocreat
+sync
+
+################################################################################
+		ATF Build
+################################################################################
+
+make realclean
+make PLAT=rk3399 bl31
+
+################################################################################
+	cottex m0 firmware
+################################################################################
+
+git clone https://git.theobroma-systems.com/rk3399-cortex-m0.git
+cd rk3399-cortex-m0
+make
+
+################################################################################
+			GPIO
+################################################################################
+
+      ------------------------------------------------------------------------
+      |	Bank |	0   |	1   |	2   |	3   |	4   |	5   |	6   |	7    |
+      |-----------------------------------------------------------------------
+      |									     |
+      |	A	0	1	2	3	4	5	6	7    |
+      |									     |
+      |	B	8	9	10	11	12	13	14	15   |
+      |									     |
+      |	C	16	17	18	19	20	21	22	23   |
+      |									     |
+      |	D	24	25	26	27	28	29	30	31   |
+      ------------------------------------------------------------------------
+
+
+################################################################################
+
+################################################################################
+
+
+tools/mkimage -n rk3399 -T rksd -d ../rkbin/bin/rk33/rk3399_ddr_800MHz_v1.14.bin rksd_loader.img
+cat spl/u-boot-spl.bin >> rksd_loader.img
+
+sudo dd if=rksd_loader.img of=/dev/sdb bs=1k seek=64 conv=nocreat
+sudo dd if=u-boot.itb of=/dev/sdb bs=1k seek=16384 conv=nocreat
+
+setenv bootargs 'console=ttyS2,1500000n8 rw panic=10 init=/sbin/init root=/dev/mmcblk1p1 rootwait rootfstype=ext4 log_level=7'
+ext4load mmc 1:1 ${kernel_addr_r} /boot/vmlinuz-4.20.0-rockchip64;
+ext4load mmc 1:1 ${fdt_addr_r} boot/dtb/rockchip/rk3399-rockpi4b.dtb;
+booti ${kernel_addr_r} - ${fdt_addr_r}
+
+

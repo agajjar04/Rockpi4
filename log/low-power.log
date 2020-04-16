@@ -1,0 +1,43 @@
+root@RockPi4:~# echo mem > /sys/class/mem/
+-bash: /sys/class/mem/: Is a directory
+root@RockPi4:~# echo mem > /sys/power/state     
+[  296.398110] PM: dpm_run_callback(): platform_pm_suspend+0x0/0x60 returns -110
+[  296.398154] PM: Device xhci-hcd.0.auto failed to suspend async: error -110
+[  296.813763] PM: Some devices failed to suspend, or early wake event detected
+[  296.821989] phy phy-ff800000.phy.8: phy poweron failed --> -110
+[  296.822027] PM: dpm_run_callback(): dwc3_resume+0x0/0x60 returns -110
+[  296.822046] PM: Device fe900000.dwc3 failed to resume: error -110
+[  296.830131] phy phy-ff800000.phy.8: phy poweron failed --> -110
+[  296.830179] PM: dpm_run_callback(): usb_dev_resume+0x0/0x18 returns -110
+[  296.830210] PM: Device usb7 failed to resume async: error -110
+-bash: echo: write error: Connection timed out
+root@RockPi4:~#
+
+
+root@popcorn:~# echo mem > /sys/power/state 
+[  156.208111] PM: suspend entry (deep)
+[  156.208529] Filesystems sync: 0.000 seconds
+[  156.210125] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[  156.212067] OOM killer disabled.
+[  156.212351] Freezing remaining freezable tasks ... (elapsed 0.000 seconds) done.
+[  156.213863] printk: Suspending console(s) (use no_console_suspend to debug)
+[  156.285655] xhci-hcd xhci-hcd.0.auto: WARN: xHC CMD_RUN timeout
+[  156.285708] PM: dpm_run_callback(): platform_pm_suspend+0x0/0x60 returns -110
+[  156.285717] PM: Device xhci-hcd.0.auto failed to suspend async: error -110
+[  156.678716] PM: Some devices failed to suspend, or early wake event detected
+[  156.685240] phy phy-ff800000.phy.8: phy poweron failed --> -110
+[  156.685262] PM: dpm_run_callback(): dwc3_resume+0x0/0x60 returns -110
+[  156.685272] PM: Device fe900000.dwc3 failed to resume: error -110
+[  156.690816] rk_gmac-dwmac fe300000.ethernet: init for RGMII
+[  156.691496] phy phy-ff800000.phy.8: phy poweron failed --> -110
+[  156.691511] PM: dpm_run_callback(): usb_dev_resume+0x0/0x18 returns -110
+[  156.691519] PM: Device usb7 failed to resume async: error -110
+[  156.775330] OOM killer enabled.
+[  156.775609] Restarting tasks ... done.
+[  156.776680] PM: suspend exit
+-bash: echo: write error: Connection timed out
+[  156.789309] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+root@popcorn:~# [  156.825549] mmc1: Problem switching card into high-speed mode!
+[  156.826125] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 25000000Hz, actual 25000000HZ div = 0)
+root@popcorn:~# 
+root@popcorn:~# 

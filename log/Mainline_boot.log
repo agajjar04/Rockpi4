@@ -1,0 +1,422 @@
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 4.20.0-09760-g9e4da150a62d-dirty (agajjar@agajjar-vr) (gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.8
+[    0.000000] Machine model: Radxa Rock Pi-4
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000ff1a0000 (options '')
+[    0.000000] printk: bootconsole [uart8250] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 32 MiB at 0x00000000f6000000
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xf57fe840-0xf57fffff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000200000-0x00000000083fffff]
+[    0.000000]   node   0: [mem 0x000000000a200000-0x00000000f7ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] random: get_random_bytes called from start_kernel+0xa8/0x40c with crng_init=0
+[    0.000000] percpu: Embedded 23 pages/cpu @(____ptrval____) s55960 r8192 d30056 u94208
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 991752
+[    0.000000] Policy zone: DMA32
+[    0.000000] Kernel command line: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 rw panic=10 init=/sbin/init cohereent_pool=1M etha7
+[    0.000000] Memory: 3903856K/4030464K available (11004K kernel code, 1470K rwdata, 5132K rodata, 1408K init, 380K bss, 93840K res)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=6, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=6.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=6
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x00000000fef00000
+[    0.000000] ITS [mem 0xfee20000-0xfee3ffff]
+[    0.000000] ITS@0x00000000fee20000: allocated 65536 Devices @f1080000 (flat, esz 8, psz 64K, shr 0)
+[    0.000000] ITS: using cache flushing for cmd queue
+[    0.000000] GICv3: using LPI property table @0x00000000f1040000
+[    0.000000] GIC: using cache flushing for LPI property table
+[    0.000000] GICv3: CPU0: using allocated LPI pending table @0x00000000f1050000
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@1[1] /cpus/cpu@2[2] /cpus/cpu@3[3] }
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@100[4] /cpus/cpu@101[5] }
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000007] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.002827] Console: colour dummy device 80x25
+[    0.003251] printk: console [tty0] enabled
+[    0.003647] printk: bootconsole [uart8250] disabled
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 4.20.0-09760-g9e4da150a62d-dirty (agajjar@agajjar-vr) (gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.8
+[    0.000000] Machine model: Radxa Rock Pi-4
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000ff1a0000 (options '')
+[    0.000000] printk: bootconsole [uart8250] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 32 MiB at 0x00000000f6000000
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xf57fe840-0xf57fffff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000200000-0x00000000083fffff]
+[    0.000000]   node   0: [mem 0x000000000a200000-0x00000000f7ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] random: get_random_bytes called from start_kernel+0xa8/0x40c with crng_init=0
+[    0.000000] percpu: Embedded 23 pages/cpu @(____ptrval____) s55960 r8192 d30056 u94208
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 991752
+[    0.000000] Policy zone: DMA32
+[    0.000000] Kernel command line: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 rw panic=10 init=/sbin/init cohereent_pool=1M etha7
+[    0.000000] Memory: 3903856K/4030464K available (11004K kernel code, 1470K rwdata, 5132K rodata, 1408K init, 380K bss, 93840K res)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=6, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=6.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=6
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x00000000fef00000
+[    0.000000] ITS [mem 0xfee20000-0xfee3ffff]
+[    0.000000] ITS@0x00000000fee20000: allocated 65536 Devices @f1080000 (flat, esz 8, psz 64K, shr 0)
+[    0.000000] ITS: using cache flushing for cmd queue
+[    0.000000] GICv3: using LPI property table @0x00000000f1040000
+[    0.000000] GIC: using cache flushing for LPI property table
+[    0.000000] GICv3: CPU0: using allocated LPI pending table @0x00000000f1050000
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@1[1] /cpus/cpu@2[2] /cpus/cpu@3[3] }
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@100[4] /cpus/cpu@101[5] }
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000007] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.002827] Console: colour dummy device 80x25
+[    0.003251] printk: console [tty0] enabled
+[    0.003647] printk: bootconsole [uart8250] disabled
+[    0.004244] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.004279] pid_max: default: 32768 minimum: 301
+[    0.004416] LSM: Security Framework initializing
+[    0.006536] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.007620] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.007708] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.007762] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.030899] ASID allocator initialised with 32768 entries
+[    0.038897] rcu: Hierarchical SRCU implementation.
+[    0.047032] Platform MSI: interrupt-controller@fee20000 domain created
+[    0.047427] PCI/MSI: /interrupt-controller@fee00000/interrupt-controller@fee20000 domain created
+[    0.052590] EFI services will not be available.
+[    0.059363] smp: Bringing up secondary CPUs ...
+[    0.091603] Detected VIPT I-cache on CPU1
+[    0.091639] GICv3: CPU1: found redistributor 1 region 0:0x00000000fef20000
+[    0.091655] GICv3: CPU1: using allocated LPI pending table @0x00000000f1060000
+[    0.091697] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.123671] Detected VIPT I-cache on CPU2
+[    0.123699] GICv3: CPU2: found redistributor 2 region 0:0x00000000fef40000
+[    0.123712] GICv3: CPU2: using allocated LPI pending table @0x00000000f1070000
+[    0.123741] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.155773] Detected VIPT I-cache on CPU3
+[    0.155801] GICv3: CPU3: found redistributor 3 region 0:0x00000000fef60000
+[    0.155814] GICv3: CPU3: using allocated LPI pending table @0x00000000f1100000
+[    0.155842] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.191066] CPU features: detected: EL2 vector hardening
+[    0.191581] Detected PIPT I-cache on CPU4
+[    0.192808] GICv3: CPU4: found redistributor 100 region 0:0x00000000fef80000
+[    0.193263] GICv3: CPU4: using allocated LPI pending table @0x00000000f1110000
+[    0.194446] CPU4: Booted secondary processor 0x0000000100 [0x410fd082]
+[    0.234696] Detected PIPT I-cache on CPU5
+[    0.235871] GICv3: CPU5: found redistributor 101 region 0:0x00000000fefa0000
+[    0.236302] GICv3: CPU5: using allocated LPI pending table @0x00000000f1120000
+[    0.237366] CPU5: Bo
+                       [    1.157750] dwc3 fe800000.dwc3: Failed to get clk 'ref': -2
+[    1.168266] OF: graph: no port node found in /syscon@ff770000/usb2-phy@e450/otg-port
+[    1.176945] dwc3 fe900000.dwc3: Failed to get clk 'ref': -2
+[    1.193345] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.193987] ehci-pci: EHCI PCI platform driver
+[    1.194506] ehci-platform: EHCI generic platform driver
+[    1.197635] ehci-platform fe380000.usb: EHCI Host Controller
+[    1.198228] ehci-platform fe380000.usb: new USB bus registered, assigned bus number 1
+[    1.200927] ehci-platform fe380000.usb: irq 27, io mem 0xfe380000
+[    1.216616] ehci-platform fe380000.usb: USB 2.0 started, EHCI 1.00
+[    1.219782] hub 1-0:1.0: USB hub found
+[    1.220165] hub 1-0:1.0: 1 port detected
+[    1.225059] ehci-platform fe3c0000.usb: EHCI Host Controller
+[    1.225609] ehci-platform fe3c0000.usb: new USB bus registered, assigned bus number 2
+[    1.229022] ehci-platform fe3c0000.usb: irq 29, io mem 0xfe3c0000
+[    1.244569] ehci-platform fe3c0000.usb: USB 2.0 started, EHCI 1.00
+[    1.247115] hub 2-0:1.0: USB hub found
+[    1.247516] hub 2-0:1.0: 1 port detected
+[    1.249774] ehci-orion: EHCI orion driver
+[    1.251101] ehci-exynos: EHCI EXYNOS driver
+[    1.251929] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.253038] ohci-pci: OHCI PCI platform driver
+[    1.253622] ohci-platform: OHCI generic platform driver
+[    1.254685] ohci-platform fe3a0000.usb: Generic Platform OHCI controller
+[    1.255416] ohci-platform fe3a0000.usb: new USB bus registered, assigned bus number 3
+[    1.259915] ohci-platform fe3a0000.usb: irq 28, io mem 0xfe3a0000
+[    1.326690] hub 3-0:1.0: USB hub found
+[    1.327080] hub 3-0:1.0: 1 port detected
+[    1.328760] ohci-platform fe3e0000.usb: Generic Platform OHCI controller
+[    1.329412] ohci-platform fe3e0000.usb: new USB bus registered, assigned bus number 4
+[    1.332102] ohci-platform fe3e0000.usb: irq 30, io mem 0xfe3e0000
+[    1.398300] hub 4-0:1.0: USB hub found
+[    1.398692] hub 4-0:1.0: 1 port detected
+[    1.400990] ohci-exynos: OHCI EXYNOS driver
+[    1.403540] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    1.404108] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 5
+[    1.407396] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000000002010010
+[    1.408377] xhci-hcd xhci-hcd.0.auto: irq 214, io mem 0xfe800000
+[    1.411858] hub 5-0:1.0: USB hub found
+[    1.412270] hub 5-0:1.0: 1 port detected
+[    1.413424] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    1.413949] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 6
+[    1.414657] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0  SuperSpeed
+[    1.415343] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.417682] hub 6-0:1.0: USB hub found
+[    1.418129] hub 6-0:1.0: 1 port detected
+[    1.419570] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    1.420103] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 7
+[    1.423609] xhci-hcd xhci-hcd.1.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000000002010010
+[    1.424756] xhci-hcd xhci-hcd.1.auto: irq 215, io mem 0xfe900000
+[    1.427932] hub 7-0:1.0: USB hub found
+[    1.428327] hub 7-0:1.0: 1 port detected
+[    1.429556] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    1.430107] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 8
+[    1.430842] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.0  SuperSpeed
+[    1.431572] usb usb8: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.433818] hub 8-0:1.0: USB hub found
+[    1.434228] hub 8-0:1.0: 1 port detected
+[    1.437428] usbcore: registered new interface driver usb-storage
+[    1.451691] i2c /dev entries driver
+[    1.463154] rk808 0-001b: chip id: 0x0
+[    1.470735] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[    1.471392] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[    1.472069] DCDC_REG1: supplied by vcc5v0_sys
+[    1.474482] DCDC_REG2: supplied by vcc5v0_sys
+[    1.475639] DCDC_REG3: supplied by vcc5v0_sys
+[    1.476153] vcc_ddr: Bringing 5000000uV into 1500000-1500000uV
+[    1.476785] vcc_ddr: failed to apply 1500000-1500000uV constraint(-22)
+[    1.477381] rk808 0-001b: failed to register 2 regulator
+[    1.478557] rk808-regulator: probe of rk808-regulator failed with error -22
+[    1.481939] fan53555-regulator 0-0040: FAN53555 Option[8] Rev[1] Detected!
+[    1.482670] fan53555-reg: supplied by vcc5v0_sys
+[    1.485974] fan53555-regulator 0-0041: FAN53555 Option[8] Rev[1] Detected!
+[    1.486652] fan53555-reg: supplied by vcc5v0_sys
+[    1.513386] sdhci: Secure Digital Host Controller Interface driver
+[    1.514055] sdhci: Copyright(c) Pierre Ossman
+[    1.516130] Synopsys Designware Multimedia Card Interface Driver
+[    1.522189] dwmmc_rockchip fe320000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.527728] dwmmc_rockchip fe320000.dwmmc: Using internal DMA controller.
+[    1.528380] dwmmc_rockchip fe320000.dwmmc: Version ID is 270a
+[    1.529175] dwmmc_rockchip fe320000.dwmmc: DW MMC controller at irq 25,32 bit host data width,256 deep fifo
+[    1.530626] dwmmc_rockchip fe320000.dwmmc: Got CD GPIO
+[    1.556624] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.579834] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.580731] usb 2-1: new high-speed USB device number 2 using ehci-platform
+[    1.589908] mmc1: CQHCI version 5.10
+[    1.622542] mmc1: SDHCI controller on fe330000.sdhci [fe330000.sdhci] using ADMA
+[    1.626922] mmc_host mmc0: Bus speed (slot 0) = 25000000Hz (slot req 25000000Hz, actual 25000000HZ div = 0)
+[    1.628183] mmc0: new SD card at address aaaa
+[    1.634592] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.635379] mmcblk0: mmc0:aaaa SU02G 1.89 GiB 
+[    1.639603] usbcore: registered new interface driver usbhid
+[    1.640159] usbhid: USB HID core driver
+[    1.653077] NET: Registered protocol family 17
+[    1.653817]  mmcblk0: p1 p2
+[    1.653930] 9pnet: Installing 9P2000 support
+[    1.654682] Key type dns_resolver registered
+[    1.658624] registered taskstats version 1
+[    1.659028] Loading compiled-in X.509 certificates
+[    1.706840] mmc1: Command Queue Engine enabled
+[    1.707346] mmc1: new HS400 Enhanced strobe MMC card at address 0001
+[    1.711848] mmcblk1: mmc1:0001 D9D16G 14.5 GiB 
+[    1.713281] hctosys: unable to open rtc device (rtc0)
+[    1.713344] mmcblk1boot0: mmc1:0001 D9D16G partition 1 4.00 MiB
+[    1.714841] mmcblk1boot1: mmc1:0001 D9D16G partition 2 4.00 MiB
+[    1.715798] ALSA device list:
+[    1.716083]   No soundcards found.
+[    1.716367] mmcblk1rpmb: mmc1:0001 D9D16G partition 3 4.00 MiB, chardev (240:0)
+[    1.718105] ttyS2 - failed to request DMA
+[    1.738146] random: fast init done
+[    1.749381] usb-storage 2-1:1.0: USB Mass Storage device detected
+[    1.759812] scsi host0: usb-storage 2-1:1.0
+[    1.769146] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.770337] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    1.772193] devtmpfs: mounted
+[    1.773489] Freeing unused kernel memory: 1408K
+[    1.813213] Run /sbin/init as init process
+[    2.327792] systemd[1]: System time before build time, advancing clock.
+[    2.418026] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.421421] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.426003] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPT)
+[    2.428674] systemd[1]: Detected architecture arm64.
+
+Welcome to Ubuntu 16.04.5 LTS!
+
+[    2.454192] systemd[1]: Set hostname to <rockpi-4b>.
+[    2.476981] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.765783] scsi 0:0:0:0: Direct-Access     JetFlash Transcend 2GB    8.07 PQ: 0 ANSI: 2
+[    2.768867] sd 0:0:0:0: [sda] 3944448 512-byte logical blocks: (2.02 GB/1.88 GiB)
+[    2.770310] sd 0:0:0:0: [sda] Write Protect is off
+[    2.771537] sd 0:0:0:0: [sda] No Caching mode page found
+[    2.772030] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[    2.985036] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[    3.121533] systemd[1]: Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket (/dev/log).
+[    3.133221] systemd[1]: Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket.
+[    3.145674] systemd[1]: Created slice System Slice.
+[  OK  ] Created slice System Slice.
+[    3.162334] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[    3.173497] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[    3.175376] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[    3.185277] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[  OK  ] Listening on udev Control Socket.
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Listening on Journal Audit Socket.
+         Mounting Debug File System...
+[  OK  ] Reached target Swap.
+[  OK  ] Reached target Encrypted Volumes.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+         Starting Set console keymap...
+[  OK  ] Started Trigger resolvconf update for networkd DNS.
+         Starting Nameserver information manager...
+         Mounting Huge Pages File System...
+         Mounting POSIX Message Queue File System...
+[  OK  ] Listening on udev Kernel Socket.
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Slices.
+[  OK  ] Listening on Syslog Socket.
+         Starting Journal Service...
+[  OK  ] Reached target Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted Debug File System.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Nameserver information manager.
+[  OK  ] Started Set console keymap.
+[  OK  ] Started Journal Service.
+[  OK  ] Reached target Network (Pre).
+         Starting Load/Save Random Seed...
+         Starting udev Coldplug all Devices...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Reached target Local File Systems (Pre).
+[  OK  ] Reached target Local File Systems.
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Set console font and keymap...
+         Starting udev Kernel Device Manager...
+         Mounting Configuration File System...
+         Starting Apply Kernel Variables...
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Started Load/Save Random Seed.
+[    3.850160] systemd-journald[1769]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Tell Plymouth To Write Out Runtime Data.
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting Raise network interfaces...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Time Synchronized.
+         Starting Network Service...
+[  OK  ] Started Network Service.
+         Starting Update resolvconf for networkd DNS...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on OpenBSD Secure Shell server socket.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Regular background program processing daemon.
+         Starting WPA supplicant...
+         Starting Restore /etc/resolv.conf i...re the ppp link was shut down...
+         Starting Provide limited super user privileges to specific users...
+         Starting Login Service...
+         Starting Permit User Sessions...
+         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
+         Starting System Logging Service...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Set console font and keymap.
+[  OK  ] Started Restore /etc/resolv.conf if...fore the ppp link was shut down.
+[  OK  ] Started Provide limited super user privileges to specific users.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Found device /dev/ttyS2.
+[  OK  ] Started LSB: Set the CPU Frequency Scaling governor to "ondemand".
+[  OK  ] Started Raise network interfaces.
+[  OK  ] Reached target Network.
+         Starting Network Name Resolution...
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Started Login Service.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Started Update resolvconf for networkd DNS.
+[  OK  ] Reached target Network is Online.
+         Starting LSB: Starts or stops the xinetd daemon....
+         Starting /etc/rc.local Compatibility...
+[  OK  ] Started /etc/rc.local Compatibility.
+         Starting Terminate Plymouth Boot Screen...
+         Starting Hold until boot process finishes up...
+[  OK  ] Started Terminate Plymouth Boot Screen.
+[  OK  ] Started Hold until boot process finishes up.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Started Getty on ttyFIQ0.
+         Starting Set console scheme...
+[  OK  ] Started Serial Getty on ttyS2.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Set console scheme.
+[  OK  ] Started LSB: Starts or stops the xinetd daemon..
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Ubuntu 16.04.5 LTS rockpi-4b ttyS2
+
+rockpi-4b login: ubuntu
+

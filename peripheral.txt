@@ -1,0 +1,15 @@
+ETH
+USB 2.0
+USB 3.0
+POE
+MIC JACK
+CSI
+HDMI
+TYPE C Connector
+PCIe x4
+SD card
+WIFI
+EULER BUS
+
+Connector beneath typec - unidentified
+Switch beneath USB - unidentified

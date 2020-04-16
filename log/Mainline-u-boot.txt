@@ -1,0 +1,221 @@
+DDR Version 1.14 20180803
+In
+Channel 0: LPDDR4,50MHz
+CS = 0
+MR0=0x98
+MR4=0x3
+MR5=0xFF
+MR8=0x8
+MR12=0x4D
+MR14=0x4D
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x3
+MR5=0xFF
+MR8=0x8
+MR12=0x4D
+MR14=0x4D
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+Bus Width=32 Col=10 Bank=8 Row=15/15 CS=2 Die Bus-Width=16 Size=2048MB
+Channel 1: LPDDR4,50MHz
+CS = 0
+MR0=0x98
+MR4=0x3
+MR5=0xFF
+MR8=0x8
+MR12=0x4D
+MR14=0x4D
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x3
+MR5=0xFF
+MR8=0x8
+MR12=0x4D
+MR14=0x4D
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+Bus Width=32 Col=10 Bank=8 Row=15/15 CS=2 Die Bus-Width=16 Size=2048MB
+256B stride
+channel 0
+CS = 0
+MR0=0x98
+MR4=0x82
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x3
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+channel 1
+CS = 0
+MR0=0x98
+MR4=0x82
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x82
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+channel 0 training pass!
+channel 1 training pass!
+change freq to 400MHz 0,1
+channel 0
+CS = 0
+MR0=0x98
+MR4=0x2
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x82
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+channel 1
+CS = 0
+MR0=0x98
+MR4=0x2
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+CS = 1
+MR0=0x18
+MR4=0x2
+MR5=0xFF
+MR8=0x8
+MR12=0x72
+MR14=0x72
+MR18=0x0
+MR19=0x0
+MR24=0x8
+MR25=0xFF
+channel 0 training pass!
+channel 1 training pass!
+change freq to 800MHz 1,0
+ch 0 ddrconfig = 0x101, ddrsize = 0x2020
+ch 1 ddrconfig = 0x101, ddrsize = 0x2020
+pmugrf_os_reg[2] = 0x3AA1FAA1, stride = 0xD
+OUT
+Boot1: 2018-08-06, version: 1.15
+CPUId = 0x0
+ChipType = 0x10, 219
+SdmmcInit=2 0
+BootCapSize=100000
+UserCapSize=14800MB
+FwPartOffset=2000 , 100000
+mmc0:cmd5,20
+SdmmcInit=0 0
+BootCapSize=0
+UserCapSize=1938MB
+FwPartOffset=2000 , 0
+StorageInit ok = 69598
+SecureMode = 0
+SecureInit read PBA: 0x4
+SecureInit read PBA: 0x404
+SecureInit read PBA: 0x804
+SecureInit read PBA: 0xc04
+SecureInit read PBA: 0x1004
+SecureInit read PBA: 0x1404
+SecureInit read PBA: 0x1804
+SecureInit read PBA: 0x1c04
+SecureInit ret = 0, SecureMode = 0
+GPT 0x3190d20 signature is wrong
+LoadTrust Addr:0x4000
+No find bl30.bin
+Load uboot, ReadLba = 2000
+Load OK, addr=0x200000, size=0x84914
+RunBL31 0x10000
+NOTICE:  BL31: v1.3(debug):56eea3d
+NOTICE:  BL31: Built : 15:27:37, Aug  8 2018
+NOTICE:  BL31: Rockchip release version: v1.1
+INFO:    GICv3 with legacy support detected. ARM GICV3 driver initialized in EL3
+INFO:    Using opteed sec cpu_context!
+INFO:    boot cpu mask: 0
+INFO:    plat_rockchip_pmu_init(1151): pd status 3e
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Initializing BL32
+INF [0x0] TEE-CORE:init_primary_helper:337: Initializing (1.1.0-170-gc4654a6 #16 Wed May 30 08:54:30 UTC 2018 aarch64)
+
+INF [0x0] TEE-CORE:init_primary_helper:338: Release version: 1.2
+
+INF [0x0] TEE-CORE:init_teecore:83: teecore inits done
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x200000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2019.01-00259-gd3689267f9-dirty (Jan 16 2019 - 00:01:48 +0530)
+
+Model: Radxa ROCK Pi 4
+DRAM:  3.9 GiB
+MMC:   dwmmc@fe320000: 1, sdhci@fe330000: 0
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial@ff1a0000
+Out:   serial@ff1a0000
+Err:   serial@ff1a0000
+Model: Radxa ROCK Pi 4
+Net:   Net Initialization Skipped
+No ethernet found.
+Hit any key to stop autoboot:  0 
+rockpi4 => 
+rockpi4 => 
+rockpi4 => 
+rockpi4 => 
+rockpi4 => 
+
